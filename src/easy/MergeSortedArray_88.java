@@ -20,7 +20,7 @@ import java.util.Arrays;
  * Output: [1,2,2,3,5,6]
  */
 public class MergeSortedArray_88 {
-    public static int[] merge(int[] nums1, int m, int[] nums2, int n) {
+    public static void merge(int[] nums1, int m, int[] nums2, int n) {
         for (int i=m;i<m+n;i++){
             nums1[i] = nums2[i-m];
         }
