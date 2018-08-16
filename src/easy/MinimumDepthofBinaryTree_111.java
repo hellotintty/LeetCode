@@ -19,6 +19,8 @@ package easy;
  *     /  \
  *    15   7
  * return its minimum depth = 2.
+ *
+ * 根据110改编
  */
 public class MinimumDepthofBinaryTree_111 {
     public class TreeNode {
