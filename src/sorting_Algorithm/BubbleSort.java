@@ -28,7 +28,7 @@ public class BubbleSort {
         bubbleSort(arr);
         //输出结果
         for (int i = 0;i<arr.length;i++){
-            System.out.print(arr[i]+",");
+            System.out.print(arr[i]+" ");
         }
     }
 }
