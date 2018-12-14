@@ -10,16 +10,20 @@ public class BubbleSort {
         int temp = 0;
         int flag = arr.length;
         //如果这一趟没有进行数据交换则结束
-        while (flag>0){
+        for (int i = 0;i<arr.length;i++){
             flag = 0;
-            for (int i = 1;i<arr.length;i++){
+            for (int j = 1;j<arr.length-i;j++){
                 //实际就是两个两个往后比，直到最后一位
-                if (arr[i-1] > arr[i]){
-                    temp = arr[i-1];
-                    arr[i-1] = arr[i];
-                    arr[i] = temp;
-                    flag = i;
+                if (arr[j-1] > arr[j]){
+                    temp = arr[j-1];
+                    arr[j-1] = arr[j];
+                    arr[j] = temp;
+                    flag = j;
                 }
+            }
+            //如果这一轮没有数据移动，则说明已排序完成
+            if (flag == 0){
+                break;
             }
         }
     }
