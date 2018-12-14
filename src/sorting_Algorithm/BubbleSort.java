@@ -4,6 +4,15 @@ package sorting_Algorithm;
  * @author tianqi
  * @date 2018/12/12
  * 冒泡排序
+ * N个元素需要排序N-1轮；
+ *
+ * 　　第i轮需要比较N-i次；
+ *
+ * 　　N个元素排序，需要比较n（n-1）/2次；
+ *
+ * 　　冒泡排序的算法复杂度较高，为O（n*n）
+ *
+ * 但下文已经有所优化
  */
 public class BubbleSort {
     public static void bubbleSort(int[] arr){

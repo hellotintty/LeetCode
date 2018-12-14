@@ -4,6 +4,8 @@ package sorting_Algorithm;
  * @author tianqi
  * @date 2018/12/14
  * 插入排序
+ * 插入排序的速度约比冒泡排序快一倍（比较次数少一倍），比选择排序还要快一些，
+ * 对于基本有序的数据，插入排序的速度会很快，是简单排序中效率最高的排序算法。
  */
 public class InsertSort {
     public static void insertSort(int[] arr){
