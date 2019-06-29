@@ -1,6 +1,6 @@
 package leetCode.easy.testSerialize;
 
-import leetCode.easy.templeTest.Person;
+import leetCode.easy.testSerialize.Person;
 
 import java.io.*;
 import java.text.MessageFormat;
