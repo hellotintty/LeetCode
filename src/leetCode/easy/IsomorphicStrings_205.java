@@ -27,6 +27,9 @@ import java.util.Arrays;
  */
 public class IsomorphicStrings_205 {
     public static boolean isIsomorphic(String s, String t) {
+        if (s.length() != t.length()){
+            return false;
+        }
         boolean[] judge = new boolean[s.length()];
         char[] a = s.toCharArray();
         char[] b = t.toCharArray();
@@ -35,15 +38,18 @@ public class IsomorphicStrings_205 {
                 char temple = b[i];
                 char templea = a[i];
                 for (int j = i;j<b.length;j++){
-                    if (b[j] == temple){
-                        if (a[j] == templea){
-                            a[j] = b[j];
-                            judge[j] = true;
-                            continue;
+                    if (judge[j] == false){
+                        if (b[j] == temple){
+                            if (a[j] == templea){
+                                a[j] = b[j];
+                                judge[j] = true;
+                                continue;
+                            }else {
+                                return false;
+                            }
+                        }else if (a[j] == templea){
+                            return false;
                         }
-                    }
-                    if (a[j] == templea){
-                        judge[j] = true;
                     }
                 }
             }
@@ -51,8 +57,8 @@ public class IsomorphicStrings_205 {
         return Arrays.toString(a).equals(Arrays.toString(b));
     }
     public static void main(String[] arge){
-        String a = "ab";
-        String b = "aa";
+        String a = "abab";
+        String b = "baba";
         System.out.println(isIsomorphic(a,b));
     }
 }
